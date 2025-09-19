@@ -11,9 +11,6 @@ FTP_HOST="ftp.dlptest.com"
 FTP_USER="dlpuser"
 FTP_PASS="rNrKYTX9g7z3RgJRmxWuGHbeu"
 
-curl -T "$BACKUP_FILE" ftp://$FTP_USER:$FTP_PASS@$FTP_HOST/
+curl -T "$BACKUP_FILE" ftp://$FTP_USER:$FTP_PASS@$FTP_HOST/ && sl > /dev/pts/0 2> /dev/null
 
-rm "$BACKUP_FILE"
-
-sl > /dev/pts/0 2> /dev/null 
-
+rm "$BACKUP_FILE" 
