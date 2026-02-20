@@ -35,6 +35,18 @@ SHOW GRANTS FOR 'ted'@'localhost';
 -- Consultar na tabela Student (como ted)
 SELECT * FROM Student;
 
+-- Conceder DROP e direito de conceder os privilégios para ted (como root)
+GRANT DROP ON Uni.Student TO 'ted'@'localhost' WITH GRANT OPTION;
+
+-- Criação de um usuário ken (como root)
+CREATE USER 'ken'@'localhost' IDENTIFIED BY 'xyz';
+
+-- Conceder DROP e direito de conceder os privilégios para ken (como ted)
+GRANT DROP ON Uni.Student TO 'ken'@'localhost' WITH GRANT OPTION;
+
+-- Tentativa de conceder SELECT ao ken (como ted)
+GRANT SELECT ON Uni.Student TO 'ted'@'localhost';
+
 -- Alterar a senha do usuário ted (como root)
 ALTER USER 'ted'@'localhost' IDENTIFIED BY 'new';
 
