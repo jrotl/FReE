@@ -47,6 +47,9 @@ GRANT DROP ON Uni.Student TO 'ken'@'localhost' WITH GRANT OPTION;
 -- Tentativa de conceder SELECT ao ken (como ted)
 GRANT SELECT ON Uni.Student TO 'ted'@'localhost';
 
+-- Remover a tabela Student (como ken)
+DROP TABLE Uni.Student;
+
 -- Alterar a senha do usuário ted (como root)
 ALTER USER 'ted'@'localhost' IDENTIFIED BY 'new';
 
