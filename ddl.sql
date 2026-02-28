@@ -1,3 +1,4 @@
+DROP SCHEMA IF EXISTS Running_B;
 CREATE SCHEMA Running_B;
 USE Running_B;
 
