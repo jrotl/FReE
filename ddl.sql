@@ -23,7 +23,7 @@ CONSTRAINT PK_Professor PRIMARY KEY (professor_id)
 CREATE TABLE Exame (
 primeiroNome VARCHAR(20) NOT NULL,
 sobrenome VARCHAR(20) NOT NULL,
-cpf CHAR(11) NOT NULL PRIMARY KEY,
+cpf INT(11) NOT NULL PRIMARY KEY,
 email VARCHAR(255) NOT NULL UNIQUE,
 cep INT,
 dataNascimento DATE,
